@@ -31,8 +31,12 @@ export default class App {
         return `0${date.getDate()}`.slice(-2);
       case 'l':
         return new Intl.DateTimeFormat(this.locale, { weekday: 'long' }).format(date);
+      case 'D':
+        return new Intl.DateTimeFormat(this.locale, { weekday: 'short' }).format(date);
       case 'F':
         return new Intl.DateTimeFormat(this.locale, { month: 'long' }).format(date);
+      case 'M':
+        return new Intl.DateTimeFormat(this.locale, { month: 'short' }).format(date);
       case 'm':
         return `0${date.getMonth() + 1}`.slice(-2);
       case 'n':

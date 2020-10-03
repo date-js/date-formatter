@@ -10,7 +10,7 @@ const config = {
     filename: 'date-formatter.js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd',
-    library: 'smDate'
+    library: 'DateFormatter'
   },
   resolve: {
     extensions: ['.ts', '.d.ts', '.js', '.json'],
