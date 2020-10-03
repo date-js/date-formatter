@@ -25,7 +25,7 @@
   "files": [
     "dist"
   ],
-  "typings": "dist/src/index.d.ts",
+  "types": "dist/index.d.ts",
   "author": "Adrien Peyre",
   "license": "MIT",
   "bugs": {
