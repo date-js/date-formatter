@@ -1,22 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <title>Clever Date</title>
+    <title>Date Formatter</title>
 </head>
 <body>
     <div id="dates"></div>
-    <script src="../dist/sm-date.js"></script>
+    <script src="../dist/date-formatter.js"></script>
     <script>
         var element = document.getElementById('dates');
-        var langs = [null, 'fr', 'en', 'invalid'];
-        langs.forEach(function(l) {
-          smDate.setLang(l);
+        var locales = ['fr', 'en', 'es-ES', 'invalid'];
+        locales.forEach(function(l) {
+            smDate.setLocale(l);
 
-          var txt = [];
-          txt.push('Nous sommes le '+smDate.format('%l %j %F %Y et il est %H\\h%i et %s secondes', new Date()));
-          txt.push(''+smDate.format('%d/%m/%Y', new Date()));
-          txt.push(''+smDate.format('%j/%n/%y', new Date()));
-          element.innerHTML = element.innerHTML + txt.join('<br />') + '<br /><br />';
+            var txt = [];
+            txt.push(smDate.format('%l %j %F %Y - %H:%i:%s', new Date()));
+            txt.push(''+smDate.format('%d/%m/%Y', new Date()));
+            txt.push(''+smDate.format('%j/%n/%y', new Date()));
+
+            element.innerHTML = element.innerHTML + txt.join('<br />') + '<br /><br />';
         });
     </script>
 </body>

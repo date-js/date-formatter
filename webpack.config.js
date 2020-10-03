@@ -7,7 +7,7 @@ const config = {
     'index': './src/index.ts',
   },
   output: {
-    filename: 'sm-date.js',
+    filename: 'date-formatter.js',
     path: path.resolve(__dirname, 'dist'),
     libraryTarget: 'umd',
     library: 'smDate'
@@ -34,17 +34,6 @@ const config = {
   optimization: {
     minimize: true,
     minimizer: [new TerserPlugin()],
-  },
-  devServer: {
-    writeToDisk: true,
-    disableHostCheck: true,
-    host: '0.0.0.0',
-    open: true,
-    openPage: 'example/',
-    onListening: (server) => {
-      const port = server.listeningApp.address().port;
-      console.info("\n\nGo to => http://localhost:"+port+"/example/\n");
-    }
   },
 };
 

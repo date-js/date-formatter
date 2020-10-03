@@ -1,22 +1,18 @@
 # sm-date
 
-A light javascript tool for formatting date.
-Zero dependency.
-
-## Languages supported
-Languages defined bellow are supported:
-- English (en)
-- Français (fr)
+- A light javascript tool for formatting date.
+- Zero dependency.
+- TypeScript compatible.
 
 ## Example 
 
 ``` javascript
-console.log(smDate.format('%l %j %F %Y', new Date()));
+console.log(dateFormatter.format('%l %j %F %Y', new Date()));
 ```
 
 The browser language is used by default. You can force a language like this:
 ``` javascript
-smDate.setLang('fr');
+dateFormatter.setLang('fr-FR');
 ```
  
 You can see examples in example directory.
@@ -26,7 +22,7 @@ You can see examples in example directory.
 ### ES6
 
 ``` bash
-npm install sm-date
+npm install sm-date --save
 ```
 
 ### Otherwise

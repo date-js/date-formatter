@@ -1,14 +1,8 @@
-import LangManager from './LangManager';
-
 export default class App {
-  private langManager: LangManager;
+  protected locale?: string = navigator.language;
 
-  constructor() {
-    this.langManager = new LangManager();
-  }
-
-  public setLang(lang?: string): void {
-    this.langManager.setLang(lang);
+  public setLocale(locale: string): void {
+    this.locale = locale;
   }
 
   public format(format: string, date: Date): string {
@@ -36,9 +30,9 @@ export default class App {
       case 'd':
         return `0${date.getDate()}`.slice(-2);
       case 'l':
-        return this.langManager.getDay(date.getDay());
+        return new Intl.DateTimeFormat(this.locale, { weekday: 'long' }).format(date);
       case 'F':
-        return this.langManager.getMonth(date.getMonth());
+        return new Intl.DateTimeFormat(this.locale, { month: 'long' }).format(date);
       case 'm':
         return `0${date.getMonth() + 1}`.slice(-2);
       case 'n':
