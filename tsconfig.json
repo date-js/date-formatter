@@ -1,11 +1,9 @@
 {
   "compilerOptions": {
+    "strict": true,
     "outDir": "./dist/",
     "declaration": true,
     "noImplicitAny": true,
-    "moduleResolution": "node",
-    "module": "commonjs",
-    "target": "es5",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": [
