@@ -1,16 +1,16 @@
 export default class App {
-  protected locale?: string = navigator.language;
+  protected locale: string = navigator.language;
 
   public setLocale(locale: string): void {
     this.locale = locale;
   }
 
-  public format(format: string, date: Date): string {
+  public format(format: string, date: Date, locale?: string): string {
     let formatted = format;
     let varData;
     const varRegexp = /%([a-z]+)/gi;
     while ((varData = varRegexp.exec(format)) !== null) {
-      const variableValue = this.getVariableValue(varData[1], date);
+      const variableValue = this.getValueFromSymbol(varData[1], date, locale ?? this.locale);
       if (variableValue !== null) {
         formatted = formatted.replace(varData[0], variableValue);
       }
@@ -19,8 +19,8 @@ export default class App {
     return formatted.replace('\\', '');
   }
 
-  private getVariableValue(varName: string, date: Date): string | null {
-    switch (varName) {
+  public getValueFromSymbol(symbol: string, date: Date, locale: string): string | null {
+    switch (symbol) {
       case 'Y':
         return date.getFullYear().toString();
       case 'y':
@@ -30,13 +30,13 @@ export default class App {
       case 'd':
         return `0${date.getDate()}`.slice(-2);
       case 'l':
-        return new Intl.DateTimeFormat(this.locale, { weekday: 'long' }).format(date);
+        return new Intl.DateTimeFormat(locale, { weekday: 'long' }).format(date);
       case 'D':
-        return new Intl.DateTimeFormat(this.locale, { weekday: 'short' }).format(date);
+        return new Intl.DateTimeFormat(locale, { weekday: 'short' }).format(date);
       case 'F':
-        return new Intl.DateTimeFormat(this.locale, { month: 'long' }).format(date);
+        return new Intl.DateTimeFormat(locale, { month: 'long' }).format(date);
       case 'M':
-        return new Intl.DateTimeFormat(this.locale, { month: 'short' }).format(date);
+        return new Intl.DateTimeFormat(locale, { month: 'short' }).format(date);
       case 'm':
         return `0${date.getMonth() + 1}`.slice(-2);
       case 'n':

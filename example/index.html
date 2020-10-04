@@ -16,6 +16,7 @@
             txt.push(DateFormatter.format('%l %j %F %Y - %H:%i:%s', new Date()));
             txt.push(''+DateFormatter.format('%d/%m/%Y', new Date()));
             txt.push(''+DateFormatter.format('%j/%n/%y', new Date()));
+            txt.push(''+DateFormatter.format('%l %j %F %Y - %H:%i:%s', new Date(), 'de-DE'));
 
             element.innerHTML = element.innerHTML + txt.join('<br />') + '<br /><br />';
         });

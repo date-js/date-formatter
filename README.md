@@ -4,18 +4,23 @@
 - Zero dependency.
 - TypeScript compatible.
 
-## Example 
+## Example
 
 ``` javascript
 DateFormatter.format('%l %j %F %Y', new Date());
 // Sunday 12 October 2014
 ```
 
+``` javascript
+DateFormatter.format('%l %j %F %Y', new Date(), 'fr_FR');
+// Samedi 12 octobre 2014
+```
+
 By default, Date Formatter uses the current browser language. You can force a locale like this:
 ``` javascript
 DateFormatter.setLocale('fr-FR');
 ```
- 
+
 You can see examples in example directory.
 
 ## Install it
