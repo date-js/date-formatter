@@ -38,7 +38,7 @@ import DateFormatter from '@sm-date/date-formatter';
 ### Otherwise
 
 ``` html
-<script src="https://cdn.jsdelivr.net/npm/@sm-date/date-formatter@1.0/dist/date-formatter.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@date-js/date-formatter@1.0/dist/date-formatter.js"></script>
 ```
 
 ## Format
