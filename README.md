@@ -1,6 +1,6 @@
 # Date Formatter
 
-- A light javascript tool for formatting date.
+- A light javascript tool for formatting date (<3kB).
 - Zero dependency.
 - TypeScript compatible.
 
@@ -28,11 +28,11 @@ You can see examples in example directory.
 ### With NPM
 
 ``` bash
-npm install @sm-date/date-formatter --save
+npm install @date-js/date-formatter --save
 ```
 
 ``` javascript
-import DateFormatter from '@sm-date/date-formatter';
+import DateFormatter from '@date-js/date-formatter';
 ```
 
 ### Otherwise
