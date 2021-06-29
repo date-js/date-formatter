@@ -13,7 +13,7 @@ const config = {
     library: 'DateFormatter'
   },
   resolve: {
-    extensions: ['.ts', '.d.ts', '.js', '.json'],
+    extensions: ['.ts', '.js', '.json'],
   },
   module: {
     rules: [
