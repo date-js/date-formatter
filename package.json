@@ -1,8 +1,15 @@
 {
   "name": "@date-js/date-formatter",
   "version": "0.0.0-version",
-  "description": "A light javascript tool for formatting date.",
+  "description": "Tiny date formatter with locale support. Zero dependencies, under 1KB gzipped.",
   "main": "dist/date-formatter.js",
+  "exports": {
+    ".": {
+      "import": "./dist/date-formatter.js",
+      "require": "./dist/date-formatter.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
   "scripts": {
     "prepublishOnly": "webpack",
     "eslint": "eslint src",
@@ -17,11 +24,18 @@
   },
   "keywords": [
     "date",
-    "light",
-    "small",
-    "tiny",
     "format",
-    "formatter"
+    "formatter",
+    "date-format",
+    "strftime",
+    "intl",
+    "locale",
+    "i18n",
+    "lightweight",
+    "tiny",
+    "zero-dependency",
+    "browser",
+    "typescript"
   ],
   "files": [
     "dist"
