@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "strict": true,
+    "rootDir": "./src",
     "outDir": "./dist/",
     "declarationDir": "./dist/types",
     "declaration": true,
@@ -9,5 +10,6 @@
       "es2015",
       "dom"
     ]
-  }
+  },
+  "include": ["src"]
 }
