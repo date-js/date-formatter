@@ -1,11 +1,8 @@
-import App from './App';
+import DateFormatter from './DateFormatter';
 
-const app = new App();
-const DateFormatter = {
-  format: app.format.bind(app),
-  setLocale: app.setLocale.bind(app),
-  getValueFromSymbol: app.getValueFromSymbol.bind(app)
-};
+// Named export: the class, for module users who want their own isolated instance
+export { DateFormatter };
 
-module.exports = DateFormatter;
-export default DateFormatter;
+// Default export: pre-instantiated singleton, for convenience and browser global (UMD)
+const defaultInstance = new DateFormatter();
+export default defaultInstance;
