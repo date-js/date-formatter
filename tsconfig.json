@@ -4,8 +4,6 @@
     "outDir": "./dist/",
     "declarationDir": "./dist/types",
     "declaration": true,
-    "noImplicitAny": true,
-    "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": [
       "es2015",
